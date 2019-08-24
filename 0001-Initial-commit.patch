@@ -1,0 +1,740 @@
+From 3de975d595d62817a109cb4304ec2bbab49e99ef Mon Sep 17 00:00:00 2001
+From: "Joaquin \"Florius\" Azcarate" <j@florius.com.ar>
+Date: Thu, 22 Aug 2019 16:01:29 +0000
+Subject: [PATCH] Initial commit
+
+---
+ .classpath                           |   7 +++
+ .diagrams/comidas.wsdi               | Bin 0 -> 640 bytes
+ .diagrams/pepita.wsdi                | Bin 0 -> 518 bytes
+ .diagrams/pepita2.wsdi               | Bin 0 -> 957 bytes
+ .gitignore                           |   2 +
+ .project                             |  35 ++++++++++++
+ .settings/org.eclipse.jdt.core.prefs |   7 +++
+ .travis.yml                          |   8 +++
+ LICENSE                              |  21 +++++++
+ META-INF/MANIFEST.MF                 |  22 ++++++++
+ README.md                            |   4 ++
+ build.properties                     |   3 +
+ doc/enunciado1.md                    |  33 +++++++++++
+ doc/enunciado2.md                    |  80 +++++++++++++++++++++++++++
+ doc/enunciado3.md                    |  10 ++++
+ doc/enunciado4.md                    |  48 ++++++++++++++++
+ doc/enunciado5.md                    |  29 ++++++++++
+ doc/enunciado6.md                    |  56 +++++++++++++++++++
+ doc/enunciado7.md                    |  16 ++++++
+ doc/enunciado8.md                    |  42 ++++++++++++++
+ doc/enunciado9.md                    |  55 ++++++++++++++++++
+ src/pepita.wlk                       |  33 +++++++++++
+ 22 files changed, 511 insertions(+)
+ create mode 100644 .classpath
+ create mode 100644 .diagrams/comidas.wsdi
+ create mode 100644 .diagrams/pepita.wsdi
+ create mode 100644 .diagrams/pepita2.wsdi
+ create mode 100644 .gitignore
+ create mode 100644 .project
+ create mode 100644 .settings/org.eclipse.jdt.core.prefs
+ create mode 100644 .travis.yml
+ create mode 100644 LICENSE
+ create mode 100644 META-INF/MANIFEST.MF
+ create mode 100644 README.md
+ create mode 100644 build.properties
+ create mode 100644 doc/enunciado1.md
+ create mode 100644 doc/enunciado2.md
+ create mode 100644 doc/enunciado3.md
+ create mode 100644 doc/enunciado4.md
+ create mode 100644 doc/enunciado5.md
+ create mode 100644 doc/enunciado6.md
+ create mode 100644 doc/enunciado7.md
+ create mode 100644 doc/enunciado8.md
+ create mode 100644 doc/enunciado9.md
+ create mode 100644 src/pepita.wlk
+
+diff --git a/.classpath b/.classpath
+new file mode 100644
+index 0000000..22f3064
+--- /dev/null
++++ b/.classpath
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<classpath>
++	<classpathentry kind="src" path="src"/>
++	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
++	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
++	<classpathentry kind="output" path="bin"/>
++</classpath>
+diff --git a/.diagrams/comidas.wsdi b/.diagrams/comidas.wsdi
+new file mode 100644
+index 0000000000000000000000000000000000000000..00f2ea56c190960e99e1b5d8d89b25e719882b15
+GIT binary patch
+literal 640
+zcmZvZzityj5XQ%L3{EV-fJ8+eA$x*?0t$#s43Q3G$r6P{!T4@{xAFeD%<jdP6i7S+
+z6$L#-UII~2L&-bv4$S%pAdxFpt8c&gW`1+$KcVjlo;fN+eY`*t6}cms1+jKoyOpSw
+z$Q2fZ#*0j&_tJ}5z@W0Htvq&isfwCda`ye*!TBe%bJm679Ih)r)fkqJ%tUE9hh36J
+znuVm)WgGjx&1dRN&PuGLpTjj@y7en0g$pfx3WH^>^%O%H;8uEsCzxooMKTMdZ1E_C
+zQK|A=+Oad0v(g41VAT5RpmdTdAJ{c)T~nlJxbctS1y=mNt$$DBkKrx!IM$IWltmq<
+zeu+j#y%Y61c$G^!(9FT@qTb~Il8njp7ee1NRGZdR(18H=lkvkOmnTWP)xCRr5BN$e
+zUtuN_Q|q9nvQhzG|JgSGmD`b7L>946gr^axdG~$y!&m&+gU%sr#YWtMzx7r;8?L(f
+zx9U0ik|Fz7e|-LO=gqesbSJQ*9p)3vf}=y&4kbz6y3U*G@spUqNdrDc@z!h@2A4bp
+a7-r6>9KBfU)y8%uR$NRGH}juxS<o+wT*C7J
+
+literal 0
+HcmV?d00001
+
+diff --git a/.diagrams/pepita.wsdi b/.diagrams/pepita.wsdi
+new file mode 100644
+index 0000000000000000000000000000000000000000..44ad49d7a9aae977d99807a1473adf49955b88cc
+GIT binary patch
+literal 518
+zcmYk2Jx&}!5QU57#|su_!4er4aL|+CfB-CD0cng@AQ2F`*y)`q=;<D+YrJDiAi*sh
+z_y(5mfE+l6kUNlY0=hjikd#_auU>zzem%gnXV`I^tNQ!|Syk*#^-$E<8RO1WO)4YI
+z8B4E*2EEr_9SRB!w_17A*%9S62g%vr*N-1p4^}Ta&^?BC<Oc?2<hbmU(Z?|F3pYMO
+zCOk3Pr_deM#tcvjfu-~mzhYw0=E<Qj*?cX9UO`!=?WQX$XSEeC&})6QkV#VV5?pUv
+z*8n*h7G4=XV--^zQ%)95gxJSYpTi|gM7<VIndWVy%a|VZP71TE19d3V3QYwd@F6K&
+zsS{hp3j{n$a+0L1jZmd45=@@Y6wdiRmQfK>ePYIMk+iwGTlw)9e@?>09!z=qu46L5
+zcq+~&Y%RWQ?V>LN{q&prn?K86ZYQDBhdJXg>*G)y@4>7Ttiw4?)>P{oF(D*%!|26V
+WBQV!usj)fx*JCE?|Nn|jUkgtk=%%#*
+
+literal 0
+HcmV?d00001
+
+diff --git a/.diagrams/pepita2.wsdi b/.diagrams/pepita2.wsdi
+new file mode 100644
+index 0000000000000000000000000000000000000000..ea6391af63cec3dee321bf6e0668ced9c21854b7
+GIT binary patch
+literal 957
+zcmcgqJ#Q015FOibaAH0TNJvPeprFj2aFGHK5IGnuIbg{Wg`r@4yT03a@Ak60mpi9G
+z;x|xH&{O13APQ<I`2$q^2WEY7Kte*IVWitzy?Og~-t3(GfTlI@SeuCDhf_2xGx|V;
+zjul!dJ!iROTw-J}u`E<*t*~tD(8+MGf_plh$tX7j>GbW5*2#xt^SBP}30#zRq|nW@
+zN%~TW32YgWh-50vP=`zUZpz2<Sd3%Lgq^?z8|&gZ8i`XS>=0VBT&WSd*uj<I0UlwX
+zFpYw-Gct|t4xtlE&PCeONv2bgI_scQ@p30sFqGC2t6i~1XguN4Z-jl!D8HdjtFedh
+z8X6?4jf`Z9%2)jq6XEfi$8%>T7v_;7A9S6^>m*<V*(CQXplQierB-H80|(upcPHTD
+zD5$!+eS3R{wq|ZK3`LOS%E^()q{EkI-KJN$>OC{>h3y)H3vZ}=^L6XpXMEp)+5p!4
+zMRWy4vF6v3PF?<W>IvGIOg7Jb`}pbFt1k_x_hD0M<b4dCHUrpju@TgD#mnr$L$5$e
+zEm}H$S1vuYP7~+P5;X_oe;SxXbD@}TC4V;c)3xt`d)d-*msS7!RQpXYD?%kRD;PIe
+zbUBNJPJ}ZHHqtV6zAlPd9qI$9mGmu^4Y*EVvvkm2i56<UEPvh8SKaY1_6P7k4c_{j
+i!97W1WoeLn$rP2z^;pO#b^~Y@lDl~6_623Xmp=hpt}2EA
+
+literal 0
+HcmV?d00001
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..f0ba024
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,2 @@
++**/bin
++wollokREPL.wlk
+\ No newline at end of file
+diff --git a/.project b/.project
+new file mode 100644
+index 0000000..52b0fe3
+--- /dev/null
++++ b/.project
+@@ -0,0 +1,35 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<projectDescription>
++	<name>multiPepita</name>
++	<comment></comment>
++	<projects>
++	</projects>
++	<buildSpec>
++		<buildCommand>
++			<name>org.eclipse.jdt.core.javabuilder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++		<buildCommand>
++			<name>org.eclipse.pde.ManifestBuilder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++		<buildCommand>
++			<name>org.eclipse.pde.SchemaBuilder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++		<buildCommand>
++			<name>org.eclipse.xtext.ui.shared.xtextBuilder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++	</buildSpec>
++	<natures>
++		<nature>org.eclipse.jdt.core.javanature</nature>
++		<nature>org.eclipse.pde.PluginNature</nature>
++		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
++		<nature>org.uqbar.project.wollok.wollokNature</nature>
++	</natures>
++</projectDescription>
+diff --git a/.settings/org.eclipse.jdt.core.prefs b/.settings/org.eclipse.jdt.core.prefs
+new file mode 100644
+index 0000000..0c68a61
+--- /dev/null
++++ b/.settings/org.eclipse.jdt.core.prefs
+@@ -0,0 +1,7 @@
++eclipse.preferences.version=1
++org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
++org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
++org.eclipse.jdt.core.compiler.compliance=1.8
++org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
++org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
++org.eclipse.jdt.core.compiler.source=1.8
+diff --git a/.travis.yml b/.travis.yml
+new file mode 100644
+index 0000000..c301551
+--- /dev/null
++++ b/.travis.yml
+@@ -0,0 +1,8 @@
++language: generic
++
++sudo: required
++
++script:
++    - git clone https://github.com/uqbar-project/wollok-cli
++    - export PATH="$PATH:./wollok-cli"
++    - wollok test
+diff --git a/LICENSE b/LICENSE
+new file mode 100644
+index 0000000..1a24ffa
+--- /dev/null
++++ b/LICENSE
+@@ -0,0 +1,21 @@
++MIT License
++
++Copyright (c) 2019 Wollok Project
++
++Permission is hereby granted, free of charge, to any person obtaining a copy
++of this software and associated documentation files (the "Software"), to deal
++in the Software without restriction, including without limitation the rights
++to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
++copies of the Software, and to permit persons to whom the Software is
++furnished to do so, subject to the following conditions:
++
++The above copyright notice and this permission notice shall be included in all
++copies or substantial portions of the Software.
++
++THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
++AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
++SOFTWARE.
+diff --git a/META-INF/MANIFEST.MF b/META-INF/MANIFEST.MF
+new file mode 100644
+index 0000000..17a8059
+--- /dev/null
++++ b/META-INF/MANIFEST.MF
+@@ -0,0 +1,22 @@
++Manifest-Version: 1.0
++Bundle-ManifestVersion: 2
++Bundle-Name: multiPepita
++Bundle-Vendor: My Company
++Bundle-Version: 1.0.0.qualifier
++Bundle-SymbolicName: multiPepita; singleton:=true
++Bundle-ActivationPolicy: lazy
++Require-Bundle: com.ibm.icu,
++ org.eclipse.xtext,
++ org.eclipse.xtext.generator,
++ org.eclipse.xtend,
++ org.eclipse.xtend.typesystem.emf,
++ org.eclipse.xpand,
++ de.itemis.xtext.antlr;resolution:=optional,
++ org.eclipse.emf.mwe2.launch;resolution:=optional,
++ org.uqbar.project.wollok,
++ org.uqbar.project.wollok.launch,
++ org.uqbar.project.wollok.lib,
++ org.eclipse.xtext.ui
++Import-Package: org.apache.log4j,
++ org.apache.commons.logging
++Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..5d5b7ef
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,4 @@
++# Multi Pepita
++ 
++
++Seguí la historia de pepita en los [enunciados](doc)
+\ No newline at end of file
+diff --git a/build.properties b/build.properties
+new file mode 100644
+index 0000000..e82731d
+--- /dev/null
++++ b/build.properties
+@@ -0,0 +1,3 @@
++source.. = src/
++bin.includes = META-INF/,\
++               .
+\ No newline at end of file
+diff --git a/doc/enunciado1.md b/doc/enunciado1.md
+new file mode 100644
+index 0000000..7ce5878
+--- /dev/null
++++ b/doc/enunciado1.md
+@@ -0,0 +1,33 @@
++# Pepita la golondrina
++
++Implementar un objeto que modele a **Pepita**, una golondrina de la que nos interesa saber si está cansada en base a la energía que tiene en cada momento, medida en joules.
++En el modelo simplificado que nos piden implementar, las únicas acciones que vamos a contemplar son:
++- cuando Pepita _vuela_ una cantidad de kilómetros, en este caso gasta un joule por cada kilómetro, más 10 joules de "costo fijo" de despegue y aterrizaje.
++- cuando Pepita _come_ una comida su energía aumenta según lo que otorgue el alimento.
++  - El _alpiste_ otorga 4 joules por cada gramo.
++  - La _manzana_ otorga siempre 50 joules.
++
++
++La energía de Pepita nace en 100. El alpiste comienza con 10 gramos.
++
++#### Nos dicen que pepita está cansada cuando su energía se encuentra por debajo de los 50 joules.
++
++<br>
++
++El objeto que implementa este modelo de Pepita, debe entender los siguientes mensajes:
++- `estaCansada()`
++- `vola(kilometros)`
++- `come(comida)`
++
++P.ej. el siguiente código debería ser válido para usar en un REPL:
++```wollok
++>>> pepita.volar(10) // Gasta 20 -> queda en 80
++>>> pepita.come(alpiste) // Gana 40 -> queda en 120
++>>> pepita.vola(100) // Gana 110 -> queda en 10
++>>> pepita.estaCansada()
++true
++>>> pepita.come(manzana) // Gana 50 -> queda en 60
++>>> pepita.estaCansada()
++false
++```
++
+diff --git a/doc/enunciado2.md b/doc/enunciado2.md
+new file mode 100644
+index 0000000..0c2a391
+--- /dev/null
++++ b/doc/enunciado2.md
+@@ -0,0 +1,80 @@
++# Etapa 2 - Pepita crece
++
++## Más cosas que se le pueden preguntar
++
++Agregar al modelo de Pepita la capacidad de entender estos mensajes:
++- `estaFeliz()`, Pepita _está feliz_ si su energía está entre 500 y 1000 joules.
++- `cuantoQuiereVolar()`, que es el resultado de la siguiente cuenta. <br> 
++  - De base, quiere volar (energía / 5) kilómetros, p.ej., si tiene 120 de energía, quiere volar 24 kilómetros. 
++  - Sobre esta base, considerar los siguientes agregados:
++    - Si la energía está entre 300 y 400 joules, entonces sumar 10  kilómetros.
++    - Si la energía es múltiplo de 20, entonces sumar 15 kilómetros. 
++  
++Por ejemplo, si la energía de Pepita es de 340 joules, entonces quiere volar 68 + 10 + 15 = 93 kilómetros. 
++ 
++Se puede probar este caso sobre un REPL recién lanzado darle de comer 85 a Pepita, así la energía queda en 340.
++
++**Nota** <br>
++Para saber si un número `n` es múltiplo de 20 hacer: 
++```
++n % 20 == 0
++``` 
++Probarlo en el REPL, p.ej. poner `35 % 20`, `40 % 20`; probar con otros valores.
++
++<br>
++
++## Salir a comer
++
++Se sabe que el lugar donde vive habitualmente Pepita está a unos 5 kilómetros de un depósito de alpiste. Por lo tanto, una forma habitual de alimentación de Pepita consiste en:
++- volar hasta el depósito, 5 kilómetros,
++- comer alpiste, y finalmente
++- volver a su zona habitual, lo que implica volar otros 5 kilómetros.
++
++Agregar al modelo de Pepita la capacidad de entender el mensaje `salirAComer()`, que ejecuta esta secuencia de acciones.
++
++<br>
++
++## Comidas especiales
++
++Agregar las siguientes cosas que puede comer Pepita
++
++### Mijo
++
++Si el mijo está mojado da 15 joules, si no da 20. 
++Hacer que el mijo entienda los mensajes `mojarse()` y `secarse()`.
++P.ej. arrancando un REPL de cero, debería funcionar como se muestra abajo
++  
++```
++>>> pepita.energia()
++0
++>>> mijo.mojarse()
++>>> pepita.comer(mijo)
++>>> pepita.energia()
++15
++>>> mijo.secarse()
++>>> pepita.comer(mijo)
++>>> pepita.energia()
++35
++```
++
++**Explicación**: <br> 
++la primera vez que Pepita come mijo, es mijo mojado, entonces da 15 joules.
++La segunda, el mijo está seco, entonces da 20 joules; mas 15 que tenía, hacen 25.
++
++
++### Canelones
++Los canelones dan 20 joules. Si tienen salsa, sumar 5 joules. Si tienen queso, sumar 7.
++Entonces tenemos: sin nada 20 joules, con salsa 25, con queso 27, con salsa y queso 32.
++
++Debe ser posible poner o sacar salsa, y poner o sacar queso, enviándole mensajes al objeto que representa a los canelones. Se puede hacer agregando 4 métodos, uno por cada una de las cuatro opciones posibles.
++
++<br>
++
++## Los deseos de Pepita
++
++Hacer que Pepita entienda el mensaje `haceLoQueQuieras()`. El comportamiento que tiene pepita al recibir ese mensaje depende de su estado de ánimo:
++- Si está cansada, come alpiste.
++- Si está feliz, vuela 8 kms. 
++- Si Pepita no está ni cansada ni feliz, entonces no hace nada.
++
++
+diff --git a/doc/enunciado3.md b/doc/enunciado3.md
+new file mode 100644
+index 0000000..0af8240
+--- /dev/null
++++ b/doc/enunciado3.md
+@@ -0,0 +1,10 @@
++# Parte 3 - Entrenamiento de Pepita
++
++Roque es el entrenador de Pepita. Cuando entrena a Pepita usa su rutina para aves diseñada por él.
++1. Volar 10 kms.
++2. Comer alpiste.
++3. Volar 5 kms.
++4. Que el ave haga lo que quiera (ver parte 2, al final) como premio.
++
++Se pide modelar a Roque en objetos y que entienda el mensaje `entrenar()`.
++
+diff --git a/doc/enunciado4.md b/doc/enunciado4.md
+new file mode 100644
+index 0000000..9ee05e6
+--- /dev/null
++++ b/doc/enunciado4.md
+@@ -0,0 +1,48 @@
++# Parte 4 - Otras aves
++
++**Pepón** es un gorrión que también sabe comer, volar y hacer lo que quiera, pero lo hace de manera diferente a Pepita.
++- _comer_: 
++  El aparato digestivo de Pepón anda bastante peor que el de Pepita, por eso puede aprovechar sólo la mitad de la energía que aporta el alimento. Por ejemplo, si come alpiste, en lugar de aumentar su energia en 4 joules, solamente aumenta 2.
++- _volar_: 
++  Gasta 1 joule fijo y 0.5 joules por cada kilómetro recorrido.
++- _hacer lo que quiera_: 
++  Pepón siempre vuela 1 km en este caso.
++
++<br>  
++
++**Pipa** es una paloma de la cual no nos interesa controlar su energía, sino que simplemente recuerde el acumulado de cuántos kms vuela y cuántas veces come (sin importar qué comió). Esta información se puede consultar a través de los mensajes `kmsRecorridos()` y `cantComidas()`. Cuando le piden que haga lo que quiera, Pipa no hace nada.
++
++
++Se pide 
++- modelar a Pepón y Pipa, y 
++- lograr que Roque pueda por momentos entrenar a Pepita y en otros a Pepón o Pipa.
++
++<br>
++
++**Nota** <br>
++Para que Roque realice su entrenamiento, el mensaje es `entrenar()`, _sin parámetros_. Por lo tanto, Roque debe _recordar_ a qué ave está entrenando. P.ej. este sería un test en el que Roque entrena primero a Pepita y después a Pipa:
++
++```
++test "roque trabaja" {
++    roque.tuPupiloEs(pepita)
++    roque.entrenar()
++    roque.tuPupiloEs(pipa)
++    roque.entrenar()
++    // ... acá vienen los asserts ...
++}
++```
++
++<br>
++
++## Pregunta final
++¿Qué pasa si se hace?
++```
++test "roque trabaja" {
++    roque.tuPupiloEs(pepita)
++    roque.entrenar()
++    roque.entrenar()
++}
++```
++en particular, ¿se rompe algo? y ¿cómo queda afectada Pepita?
++
++
+diff --git a/doc/enunciado5.md b/doc/enunciado5.md
+new file mode 100644
+index 0000000..b134a99
+--- /dev/null
++++ b/doc/enunciado5.md
+@@ -0,0 +1,29 @@
++# Pepita Turista
++Pepita encuentra reconfortante _visitar_ distintos destinos. 
++Cada posible destino le aporta a pepita cierta cantidad de energía revitalizadora, la cual incrementa directamente su energía (la que hasta el momento solo se modificaba al volar y comer).
++
++## Dos destinos iniciales
++Considerar estos dos lugares posibles y sus características:
++- **Patagonia**: aporta 30 joules de energía revitalizadora
++- **SierrasCordobesas**: aporta 70 joules de energía revitalizadora
++
++
++## Mar del Plata
++Agregar entre los lugares en los que pepita puede vacacionar a Mar del plata. 
++La energía revitalizadora que aporta depende de si se trata de temporada alta o baja. En temporada baja aporta 80 joules, mientras que en alta resta 20 joules. 
++
++**TIP**: se puede pensar que en temporada alta la energía que aporta es -20.	
++	
++**Cosas para pensar**: <br> 
++¿Quién tiene la responsabilidad de saber si Mar del Plata está en temporada alta o baja? ¿Cómo se cambia de temporada? 
++	
++	
++## Noroeste
++Agregar entre los lugares en los que pepita puede vacacionar al Noroeste argentino. 
++La energia revitalizadora que aporta es el 10% de la energía del ave viajera. 
++
++**Cosas para pensar**: <br> 
++¿Cómo sabe el noroeste la energía de pepita para aplicarle el 10%? ¿Es necesario cambiar el mensaje? ¿Qué pasa con el resto de los lugares ya programados?
++
++**Hint** <br>
++El 10% de un número se puede calcular como `<numero> * 0.1`.
+\ No newline at end of file
+diff --git a/doc/enunciado6.md b/doc/enunciado6.md
+new file mode 100644
+index 0000000..144bfd1
+--- /dev/null
++++ b/doc/enunciado6.md
+@@ -0,0 +1,56 @@
++# Referencias con Pepita, sus amigas, y sus entrenadores
++
++## Susana, otra entrenadora
++Agreguemos un segundo entrenador, en rigor una entrenadora, Susana. La rutina que Susana hace ejecutar a quien sea su pupilo, tiene solamente dos pasos.
++1. comer alpiste
++1. volar 20 km
++
++Susana también tiene que acordarse qué ave tiene como pupila, y entender el mensaje `entrenar()`.
++
++Agregar en Roque y en Susana el mensaje `pupiloActual()`, que devuelva el ave que está entrenando cada uno.
++
++
++<br>
++
++## Primer prueba con referencias
++Levantar un REPL nuevito y hacer lo siguiente
++1. darle de comer a Pepita y a Pepón.
++1. decirle a Roque que su pupilo es Pepita, y a Susana que su pupilo es Pepón. 
++1. fijarse la energía de Pepita y de Pepón.
++1. mirar el diagrama de objetos que se generó.
++1. hacer la cuenta de cómo debería quedar la energía de Pepita, y la de Pepón, después de decirles a Roque y a Susana que entrenen a sus pupilos.
++1. ejecutar `roque.entrenar()` y luego `susana.entrenar()`.
++1. ver si la energía de Pepita, y la de Pepón, quedaron como pensaban. 
++
++**¡OJO!** <br> 
++_no cerrar el REPL_, vamos a seguir usándolo en la parte que sigue.
++
++
++<br>
++
++## Todos con Pepita
++Sobre el mismo REPL de la parte anterior, que por supuesto no cerramos, hacer lo siguiente
++1. decirle a Susana que ahora tiene que entrenar a Pepita.
++1. mirar cómo quedó el diagrama de objetos después de este cambio.
++1. hacer la cuenta de cómo debería quedar la energía de Pepita y de Pepón después de decirles a Roque y a Susana que entrenen a sus pupilos.
++1. ejecutar `roque.entrenar()` y luego `susana.entrenar()`
++1. ver si la energía de Pepita, y la de Pepón, quedaron como pensaban. ¿Quién cambió, quién quedó igual, por qué?
++1. pensar cómo puedo darme cuenta, desde el REPL, que están entrenando a la misma ave. Ayuda: usar el mensaje `pupiloActual()`.
++
++**¡OJO!** <br> 
++otra vez te pedimos _no cerrar el REPL_.
++
++
++<br>
++
++## Accedemos a las aves entrenadas
++Siempre sobre el mismo REPL, hacer lo siguiente:
++1. Pensar qué resultado se obtiene si ponemos `roque.pupiloActual().energia()` en el REPL. 
++   Probarlo, y ver si da lo que pensabas. Hacer lo mismo con `susana.pupiloActual().energia()`.
++1. Cambiar a Susana, para que que su pupilo vuelva a ser Pepón. 
++   Repetir el punto anterior, ¿cambió algún resultado, por qué?
++1. Volver a cambiar a Susana, para que ahora tenga Pipa como pupilo. 
++   Pensar qué va a pasar ahora si ponemos en el REPL `susana.pupiloActual().energia()`. 
++   Ejecutarlo, y ver si pasa lo que pensaste. Si pasa algo distinto, explicate qué pasó.
++
++
+diff --git a/doc/enunciado7.md b/doc/enunciado7.md
+new file mode 100644
+index 0000000..81d2de8
+--- /dev/null
++++ b/doc/enunciado7.md
+@@ -0,0 +1,16 @@
++# Los límites de Roque
++
++Para este ejercicio, copiar la implementación de Roque desde la etapa 4, y usar los objetos definidos en `cosasQueVuelan.wlk`. 
++
++Lo que se pide es responder dos preguntas.
++
++1. Si le indicamos a Roque que su pupilo es el helicóptero feo, ¿lo va a poder entrenar? 
++   Si no puede, ¿por qué es?
++   Más precisamente, ¿a qué objeto le falta algo, a `roque` o a `helicopteroFeo`? ¿qué es lo que falta?
++1. Lo mismo para Pepucha. 
++   Agregar lo que falte para que sí se pueda asignar a Pepucha como pupila de Roque, y hacer que Roque la entrene.
++
++Relacionar estos dos puntos con la idea de _polimorfismo_. <br>
++Para que el helicóptero feo, o pepucha, puedan ser entrenados por Roque, ¿con quién/es tienen que ser polimórficos? 
++Considerar las aves definidas en puntos anteriores.
++    
+diff --git a/doc/enunciado8.md b/doc/enunciado8.md
+new file mode 100644
+index 0000000..9c869e7
+--- /dev/null
++++ b/doc/enunciado8.md
+@@ -0,0 +1,42 @@
++# Pepita en colecciones
++
++Partir de la resolución de la etapa 6.
++
++
++## Consultas sobre las aves
++
++Realizar las modificaciones necesarias para que Pepita, Pepon y Pipa entiendan el mensaje `puedeVolar(unosKms)`, de acuerdo a estos criterios
++- **Pepita**: si su energía es >= 10 + `unosKms`.
++- **Pepon**: si su energía es >= 1 + `unosKms` * 0.5. 
++- **Pipa**: siempre puede volar, no importa cuanto se le pida 
++
++
++## Entrenar a más de un ave 
++
++Modificar a Roque para que sea capaz de entrenar a varias aves. Para eso se debe cambiar su interfaz (conjunto de mensajes que entiende) para soportar:
++- `agregarPupilo(unAve)`: Roque agrega el ave a su colección interna de aves para entrenar. 
++- `dejarPupilo(unAve)`: Elimina el ave de su colección
++- Modificar el método `entrenar()` para que Roque entrene con la misma rutina a todas sus aves. 
++- `pupilosCapacesDeVolar(unosKms)` Es la colección de los pupilos de Roque, que son capaces de volar la cantidad de kilómetros indicada.
++
++**Nota** <br>
++Si bien Roque puede entrenar a más de un ave a la vez, Susana sigue entrenando de a un ave.
++
++Escribir un test para estos mensajes, en el cual Roque entrena a Pepita, Pepón y Pipa.
++
++
++<br>
++
++## Instituto de Entrenamiento 
++Modelar un instituto que posee entrenadores. El instituto puede contratar o desvincular a uno o varios entrenadores.
++
++Hacer que el instituto entienda los siguientes mensajes:
++- `contratar(entrenador)`: Agrega un entrenador al instrituto.
++- `prescindir(entrenador)`: Remueve un entrenador del instituto.   
++- `entrenamientoGeneral()`: Todos los entrenadores entrean a su/s pupilo/s.
++- `buenAmbiente()`: El instituto tiene buen ambiente si todos sus entrenadores están contentos. Susana está contenta si su ave puede volar 5 kilómetros. Roque está contento si entrena a más de un ave y a menos de 8.  
++- `mejoresEstudiantes()`: Es el conjunto formado por el mejor estudiante elegido para cada entrenador. El mejor estudiante de Susana es su único pupilo. Roque elige como mejor estudiante a cualquiera de sus pupilos que pueda volar 10 kilometros. 
++  
++
++Escribir los tests necesarios probando al instituto con Roque y Susana como entrenadores. Susana entrena a Pepita y Roque a Pipa y Pipón. 
++Dibujar el diagrama de objetos.
+diff --git a/doc/enunciado9.md b/doc/enunciado9.md
+new file mode 100644
+index 0000000..15e631c
+--- /dev/null
++++ b/doc/enunciado9.md
+@@ -0,0 +1,55 @@
++# Muchos objetos
++
++Partir de la resolución de la etapa 6.
++
++
++## Muchas golondrinas
++
++Modificar lo necesario para poder crear todas las **golondrinas** que uno quiera, transformando el objeto `pepita`  en la clase `Golondrina`.
++Todas las golondrinas deben tener el comportamiento definido para `pepita`.
++
++Al crearse, la energía de una golondrina debe tomar como valor inicial 0.
++Luego, la energía de cada golondrina debe evolucionar en forma independiente. 
++P.ej. si creamos dos golondrinas llamadas `juliana` y `enriqueta`, después de hacer
++```
++juliana.comer(50, alpiste)
++enriqueta.comer(10, sorgo)
++```
++la energía de `juliana` debe ser 200 mientras que la de `enriqueta` debe ser 90 (recordar que el alpiste da 4 joules por gramo, mientras que el sorgo da 9).
++
++Implementar un test en el que
++- se crean tres golondrinas, a las que llamaremos `juliana`, `melina` y `tatiana`.
++- `juliana` come 50 gramos de alpiste, `melina` 9 gramos de mondongo, y `tatiana` 8 gramos de sorgo.
++- `melina` vuela 130 kilómetros y `tatiana` 40.
++
++Luego de esto, verificar que
++- La energía de `juliana` es 200, la de `melina` es 760 y la de `tatiana` es 22.
++- `juliana` no está ni débil ni feliz, `melina` está feliz, y `tatiana` está débil.
++ 
++Armar el diagrama de objetos que corresponde a esta situación.
++
++
++## Entrenar varias golondrinas y palomas
++
++Lograr que se puedan definir varias **palomas** en forma análoga a lo hecho para las golondrinas.
++
++Hacer las modificaciones para que `roque` pueda entrenar a varias aves, incluyendo los métodos `agregarPupilo(unAve)` y `dejarPupilo(unAve)`, y la modificación del método `entrenar()` para que Roque entrene con la misma rutina a todas sus aves.
++
++Hacer un test en el que 
++- se crean tres golondrinas, llamémoslas `juliana`, `melina` y `tatiana` como en el test anterior.
++- `juliana` come 50 gramos de alpiste, `melina` 9 gramos de mondongo, `tatiana` 8 gramos de sorgo, y `pepon` 100 gramos de alpiste.
++- se crean dos palomas: `pirula` y `pirincha`, se le da de comer 100 gramos de alpiste a `pirula`, y se le indica a `pirincha` que vuele 20 kilómetros.
++- se establece que los pupilos de `roque` son: `juliana`, `melina`, `pirincha`, y `pepon`.
++- se le indica a `roque` que entrene a sus pupilos.
++
++<!---
++(vuela 10, come 30 de alpiste, vuela 5, hace lo que quiere)
++200 - 6 + 60 - 3.5 - 1.5
++--->
++
++y después se verifica que
++- los valores de energía de `juliana` , `melina`, `tatiana` y `pepon` son, respectivamente, 285, 967, 72 y 249 joules.
++- `pirula` ha comido en total 100 gramos y volado 0 kilómetros; los valores para `pirincha` son 30 joules y 35 kilómetros.
++
++Armar el diagrama de objetos que corresponde a esta situación.
++
+diff --git a/src/pepita.wlk b/src/pepita.wlk
+new file mode 100644
+index 0000000..8d866ca
+--- /dev/null
++++ b/src/pepita.wlk
+@@ -0,0 +1,33 @@
++object pepita {
++	var energia = 100
++
++	method estaCansada() {
++		return energia < 50
++	}
++
++	method vola(kms) {
++		energia -= 10 + kms
++	}
++
++	method come(comida) {
++		energia = energia + comida.energiaQueOtorga()
++	}
++}
++
++object alpiste {
++	var gramos = 10
++	
++	method energiaQueOtorga() { 
++		return 4 * gramos
++	}
++	
++	method gramos(nuevosGramos) {
++		gramos = nuevosGramos
++	}	
++}
++
++object manzana {
++	method energiaQueOtorga() { 
++		return 50
++	}	
++}
+\ No newline at end of file
+-- 
+2.23.0.windows.1
+
