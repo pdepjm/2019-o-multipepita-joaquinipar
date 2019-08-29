@@ -36,7 +36,7 @@ object pepita {
 			distancia += 15
 			
 		}
-		
+		return distancia
 	}
 	
 	method salirAComer() {
